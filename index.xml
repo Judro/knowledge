@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>🪴 Quartz 4.0</title>
+      <link>https://quartz.jzhao.xyz</link>
+      <description>Last 10 notes on 🪴 Quartz 4.0</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>playground</title>
+    <link>https://quartz.jzhao.xyz/playground</link>
+    <guid>https://quartz.jzhao.xyz/playground</guid>
+    <description>import numpy as np import torch import torch.nn as nn from torch.utils.data import TensorDataset, DataLoader from sklearn.datasets import load_iris from sklearn.decomposition ...</description>
+    <pubDate>Tue, 12 Nov 2024 17:13:12 GMT</pubDate>
+  </item><item>
+    <title>Hot List</title>
+    <link>https://quartz.jzhao.xyz/Hot-List</link>
+    <guid>https://quartz.jzhao.xyz/Hot-List</guid>
+    <description> Deep-learing (Di) Codeforce (Fr) Aufräumen linux x86 machine bereitstellen [ ] .</description>
+    <pubDate>Tue, 12 Nov 2024 17:13:12 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/</link>
+    <guid>https://quartz.jzhao.xyz/</guid>
+    <description>CPU | x86 | Array vs. Pointer.</description>
+    <pubDate>Tue, 12 Nov 2024 17:01:45 GMT</pubDate>
+  </item><item>
+    <title>linked list</title>
+    <link>https://quartz.jzhao.xyz/rechnerarchitektur/c~lang/linked-list</link>
+    <guid>https://quartz.jzhao.xyz/rechnerarchitektur/c~lang/linked-list</guid>
+    <description>Pointer-Arithmetik | Array vs. Pointer sollte vielleicht nicht in production verwendet werden, dient nur als Beispiel für die Nutzung vonpointer und Pointer-Arithmetik 😅 /* list.c */ #include &lt;stdlib.h&gt; #include &lt;string.h&gt; typedef struct ListElement { struct ListElement* next; void* data; }ListElement; typedef struct List{ ListElement* head; size_t t_size; }List; void l_init(List* list, size_t t_size){ list-&gt;head=NULL; list-&gt;t_size=t_size; } void l_append(List* list, void* data) { void* new_data = malloc(list-&gt;t_size); memcpy(new_data,data,list-&gt;t_size); ListElement* e = malloc(sizeof(struct ListElement)); e-&gt;next = NULL; e-&gt;data=new_data; if(list-&gt;head == NULL){ list-&gt;head=e; return; } ListElement* tmp = list-&gt;head; while (tmp-&gt;next != NULL) { tmp = tmp-&gt;next; } tmp-&gt;next=e; } void l_insert(List* list, void* data, unsigned position){ // if index is longer than the list it will append the end of it void* new_data = malloc(list-&gt;t_size); memcpy(new_data,data,list-&gt;t_size); ListElement* e = malloc(sizeof(struct ListElement)); e-&gt;next = NULL; e-&gt;data=new_data; if(list-&gt;head == NULL){ list-&gt;head=e; return; } if (position==0){ e-&gt;next=list-&gt;head; list-&gt;head=e; return; } ListElement* next = list-&gt;head; unsigned i = 0; while (i+1&lt;position&amp;&amp;next-&gt;next!=NULL){ next=next-&gt;next; i++; } e-&gt;next=next-&gt;next; next-&gt;next=e; } void l_delete(List* list, unsigned index) { } /* main.c */ #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void print_int_list(List* list){ ListElement* next = list-&gt;head; while (next != NULL) { printf(&quot;%d&quot;, *(int*)next-&gt;data); next=next-&gt;next; } } int main(void) { int inputs[] = {1,2,3,4,5}; List list; l_init(&amp;list,sizeof(int)); l_append(&amp;list,inputs); l_append(&amp;list,inputs+2); l_append(&amp;list,inputs+4); l_insert(&amp;list,inputs+1,1); l_insert(&amp;list,inputs+3,3); l_insert(&amp;list,inputs,10); l_insert(&amp;list,inputs+4,0); print_int_list(&amp;list); printf(&quot;\nshould be 5123451\n&quot;); return 0; } c_lang.</description>
+    <pubDate>Tue, 12 Nov 2024 14:36:34 GMT</pubDate>
+  </item><item>
+    <title>The XY problem</title>
+    <link>https://quartz.jzhao.xyz/other/The-XY-problem</link>
+    <guid>https://quartz.jzhao.xyz/other/The-XY-problem</guid>
+    <description>...</description>
+    <pubDate>Tue, 12 Nov 2024 11:18:20 GMT</pubDate>
+  </item><item>
+    <title>TODO</title>
+    <link>https://quartz.jzhao.xyz/TODO</link>
+    <guid>https://quartz.jzhao.xyz/TODO</guid>
+    <description> fix the numbers function call using stack frames .</description>
+    <pubDate>Tue, 12 Nov 2024 09:12:29 GMT</pubDate>
+  </item><item>
+    <title>Array vs. Pointer</title>
+    <link>https://quartz.jzhao.xyz/rechnerarchitektur/c~lang/Array-vs.-Pointer</link>
+    <guid>https://quartz.jzhao.xyz/rechnerarchitektur/c~lang/Array-vs.-Pointer</guid>
+    <description>Pointer-Arithmetik Array \ne Pointer Array speichert Daten Pointer speichert eine Adresse von Daten Ein Zeiger muss nicht auf den Anfang eines Arrays zeigen, ein Array-Name tut ...</description>
+    <pubDate>Tue, 12 Nov 2024 08:17:54 GMT</pubDate>
+  </item><item>
+    <title>Pointer-Arithmetik</title>
+    <link>https://quartz.jzhao.xyz/rechnerarchitektur/c~lang/Pointer-Arithmetik</link>
+    <guid>https://quartz.jzhao.xyz/rechnerarchitektur/c~lang/Pointer-Arithmetik</guid>
+    <description>Array vs. Pointer Zeiger können zur Laufzeit verändert werden Wert*Typ AusdruckZeiger-TypAddierter Wert auf die Adresseptr+1char1ptr+1int32_t4ptr+1double8 /* ptr_arith.c */ #include &lt;stdio.h&gt; int main(void) { int array[] = {45, 67, 89}; int *array_ptr = array; printf(&quot;first element: %d\n&quot;, *(array_ptr++)); printf(&quot;second element: %d\n&quot;, *(array_ptr++)); printf(&quot;third element: %d\n&quot;, *(array_ptr)); } Achtung array_ptr++inkrementiert erst nachdem der Wert geladen ist.</description>
+    <pubDate>Tue, 12 Nov 2024 07:52:38 GMT</pubDate>
+  </item><item>
+    <title>c calling convention</title>
+    <link>https://quartz.jzhao.xyz/rechnerarchitektur/assembly/c-calling-convention</link>
+    <guid>https://quartz.jzhao.xyz/rechnerarchitektur/assembly/c-calling-convention</guid>
+    <description>x86 assembly | x86 architecture | CPU | wiki calling_conventions Passing the first six arguments by register (System Call) Afterwards the stack is used (Right-To-Left (RTL) order) ...</description>
+    <pubDate>Mon, 11 Nov 2024 18:39:34 GMT</pubDate>
+  </item><item>
+    <title>x86 examples</title>
+    <link>https://quartz.jzhao.xyz/rechnerarchitektur/assembly/x86-examples</link>
+    <guid>https://quartz.jzhao.xyz/rechnerarchitektur/assembly/x86-examples</guid>
+    <description>CPU | x86 | x86 first minimal SECTION .text ; the destination of an instruction is always the left side ;load 42 into the register rax mov rax, 42 ; load 0 into the register rax mov rbx, 0 ...</description>
+    <pubDate>Mon, 11 Nov 2024 16:52:35 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
